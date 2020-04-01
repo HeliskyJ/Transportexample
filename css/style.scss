@@ -3,40 +3,43 @@ $font :  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 
     font-family: $font;
     font-size: 90px;
     font-weight: bold;
+    color: #031927;
+    box-shadow: 5px 5px #333;
+    text-shadow: 4px 5px 5px #C8E0F4;
 }
 #title{
     @include title();
 }
 body{
- background-image: url(../images/backgroundPhoto.jpg);
+ background-image: url(../images/back.jpg);
 background-size: cover;
  font-family: $font;
 }
-ul{
+.nav{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #031927;
     position: fixed;
     top: 0;
     width: 100%;
 }
-li{
-    float: left;
+.nav li{
+    float: right;
 }
-li a {
+.nav li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-li a:hover:not(.active){
-    background-color: #111;
+.nav li a:hover:not(.active){
+    background-color: #2E7788;
 }
 .active{
-    background-color: #4CAF50;
+    background-color: #3891A6;
 }
 // box title
 .box{
@@ -45,17 +48,43 @@ li a:hover:not(.active){
     // background-color: #a4b1b942;
 }
 // grid container
-.container{
+@mixin contenedores {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 80%;
     display:grid;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
-    background-color: #a4b1b95b;
-    // padding: 10px;
+    background-color: hsla(203, 9%, 59%, 0.068);
 }
+// terrestre grid
+.container{
+    @include contenedores;
+}
+// mar grid
 
+// Nav Home
+.nexNav{
+    list-style-type: circle;
+    position: fixed;
+    margin-left: 88%;
+    top: 50%;
+}
+.nexNav li{
+    font-size: 1.5em;
+}
+.nexNav li a{
+    text-decoration: none;
+    color: #351E29;
+    font-weight: bold;
+    font-size: 1.0em;
+}
+.nexNav li:hover, a:hover{
+list-style-type: disc;
+}
+.nexNav li a:hover{
+    color: #2D0605;
+}
 .container > img{
     border: 1px solid black;
     align-items: center;
