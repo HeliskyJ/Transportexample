@@ -196,3 +196,10 @@ a:hover {
     font-size: 16px;
     padding: 16px 32px;
 }
+
+// detail content
+.content{
+    margin-top: 7%;
+    @include contenedores();
+    grid-template-columns: auto auto;
+}
