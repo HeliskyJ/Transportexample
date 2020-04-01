@@ -2,15 +2,57 @@ $font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Ca
     sans-serif;
 @mixin title {
     font-family: $font;
-    font-size: 90px;
+    // font-size: 90px;
     font-weight: bold;
     color: #586a6a;
     // box-shadow: 5px 5px #333;
-    text-shadow: 4px 5px 5px #c8e0f4;
+    // text-shadow: 4px 5px 5px #c8e0f4;
 }
 #title {
     @include title();
+    text-shadow: 4px 5px 5px #c8e0f4;
+    font-size: 90px;
     grid-column: 1/4;
+}
+#refer {
+    @include title();
+    font-size: 30px;
+}
+// arrow
+.fle {
+    grid-column: 1/4;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+i {
+    border: solid #cfb1b7;
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: arrow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrow {
+    0% {
+        border-width: 0 2px 2px 0;
+    }
+    50% {
+        border-width: 0 4px 4px 0;
+    }
+    100% {
+        border-width: 0 6px 6px 0;
+    }
+}
+
+.down {
+    transform: rotate(45deg);
 }
 body {
     background-image: url(../images/fondo.jpg);
@@ -45,7 +87,9 @@ body {
 }
 // box title
 .box {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
     width: 50%;
     // background-color: #a4b1b942;
 }
@@ -55,27 +99,42 @@ body {
     margin-right: auto;
     width: 80%;
     display: grid;
-    grid-template-columns: auto auto auto;
     grid-gap: 10px;
     background-color: hsla(203, 9%, 59%, 0.068);
+}
+//grid box
+.box {
+    @include contenedores();
+    grid-template-columns: auto auto;
+}
+.box h1 {
+    grid-column: 1/4;
+}
+.box img {
+    border-radius: 50%;
+    border: 10px solid #cfb1b7;
+    box-shadow: 5px 5px 10px #cfb1b7;
 }
 // terrestre grid
 .container {
     @include contenedores;
+    grid-template-columns: auto auto auto;
 }
 // aereo grid
 .containerAir {
     @include contenedores;
+    grid-template-columns: auto auto auto;
 }
 // mar grid
 .containerMaritime {
     @include contenedores();
+    grid-template-columns: auto auto auto;
 }
 // Nav Home
 .nexNav {
     list-style-type: circle;
     position: fixed;
-    margin-left: 88%;
+    margin-left: 89%;
     top: 50%;
 }
 .nexNav li {
@@ -103,36 +162,36 @@ a:hover {
 @mixin allImagesGallery {
     opacity: 1;
     display: block;
-    transition: .5s ease;
+    transition: 0.5s ease;
     backface-visibility: hidden;
 }
 .cell {
     position: relative;
     width: 435px;
-  }
-  
-.image{
+}
+
+.image {
     @include allImagesGallery();
 }
 .actio {
-    transition: .5s ease;
+    transition: 0.5s ease;
     opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%);
 }
 
-.cell:hover .image{
+.cell:hover .image {
     opacity: 0.3;
 }
-.cell:hover .actio{
+.cell:hover .actio {
     opacity: 1;
 }
 
 .text {
-    background-color: green;
+    background-color: #586a6a;
     color: white;
     font-size: 16px;
     padding: 16px 32px;
