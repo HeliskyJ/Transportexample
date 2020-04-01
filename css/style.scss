@@ -1,32 +1,33 @@
-$font :  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 @mixin title {
     font-family: $font;
     font-size: 90px;
     font-weight: bold;
-    color: #586A6A;
+    color: #586a6a;
     // box-shadow: 5px 5px #333;
-    text-shadow: 4px 5px 5px #C8E0F4;
+    text-shadow: 4px 5px 5px #c8e0f4;
 }
-#title{
+#title {
     @include title();
     grid-column: 1/4;
 }
-body{
- background-image: url(../images/fondo.jpg);
-background-size: cover;
- font-family: $font;
+body {
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    font-family: $font;
 }
-.nav{
+.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #B9A394;
+    background-color: #b9a394;
     position: fixed;
     top: 0;
     width: 100%;
 }
-.nav li{
+.nav li {
     float: right;
 }
 .nav li a {
@@ -36,14 +37,14 @@ background-size: cover;
     padding: 14px 16px;
     text-decoration: none;
 }
-.nav li a:hover:not(.active){
-    background-color: #2E7788;
+.nav li a:hover:not(.active) {
+    background-color: #2e7788;
 }
-.active{
-    background-color: #3891A6;
+.active {
+    background-color: #3891a6;
 }
 // box title
-.box{
+.box {
     margin: auto;
     width: 50%;
     // background-color: #a4b1b942;
@@ -53,58 +54,86 @@ background-size: cover;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    display:grid;
+    display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
     background-color: hsla(203, 9%, 59%, 0.068);
 }
 // terrestre grid
-.container{
+.container {
     @include contenedores;
 }
 // aereo grid
-.containerAir{
+.containerAir {
     @include contenedores;
 }
 // mar grid
-.containerMaritime{
+.containerMaritime {
     @include contenedores();
 }
 // Nav Home
-.nexNav{
+.nexNav {
     list-style-type: circle;
     position: fixed;
     margin-left: 88%;
     top: 50%;
 }
-.nexNav li{
+.nexNav li {
     font-size: 1.5em;
 }
-.nexNav li a{
+.nexNav li a {
     text-decoration: none;
-    color: #351E29;
+    color: #351e29;
     font-weight: bold;
-    font-size: 1.0em;
+    font-size: 1em;
 }
-.nexNav li:hover, a:hover{
-list-style-type: disc;
+.nexNav li:hover,
+a:hover {
+    list-style-type: disc;
 }
-.nexNav li a:hover{
-    color: #2D0605;
+.nexNav li a:hover {
+    color: #2d0605;
 }
-.container > img{
+.container > img {
     border: 1px solid black;
     align-items: center;
 }
 
-// fade in images 
+// fade in images
 @mixin allImagesGallery {
     opacity: 1;
+    display: block;
     transition: .5s ease;
     backface-visibility: hidden;
 }
-
-.action{
-    transition .5s ease;
+.cell {
+    position: relative;
+    width: 435px;
+  }
+  
+.image{
+    @include allImagesGallery();
+}
+.actio {
+    transition: .5s ease;
     opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.cell:hover .image{
+    opacity: 0.3;
+}
+.cell:hover .actio{
+    opacity: 1;
+}
+
+.text {
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
 }
