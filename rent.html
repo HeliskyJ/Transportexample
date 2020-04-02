@@ -14,6 +14,46 @@
             <li><a href="rent.html">Alquilar</a></li>
         </ul>
     </header><br>
+    <div class="content">
+        <div class="contentRent">
+            <select name="" id="transport">
+                <option disabled selected>Elija un tipo de transporte</option>
+                <option value="terrestre">Terrestre</option>
+                <option value="maritimo">Marítimo</option>
+                <option value="aereo">Aéreo</option>
+            </select>
+            <br>
+            <label class="lab" for="">Año</label>
+            <input class="inp" type="month" placeholder="2019"><br>
+            <label class="lab" for="">Motor</label>
+            <input class="inp" type="text" placeholder="Diesel"><br>
+            <label class="lab" for="">Color</label>
+            <input class="inp" type="text" placeholder="Rojo"><br>
+            <label class="lab" for="">Tipo</label>
+            <input class="inp" type="text" placeholder="Turismo"><br>
+            <label class="lab" for="">Marca</label>
+            <input class="inp" type="text" placeholder="Audi"><br>
+            <label class="lab" for="">Modelo</label>
+            <input class="inp" type="text" placeholder="A1"><br>
+            <label class="lab" for="">Alcance</label>
+            <input class="inp" type="text" placeholder="5 personas"><br>
+        </div>
+        <div class="bill">
+            <p>Estas son las características que ha seleccionado, si desea alquilarlo, por favor confirme.</p>
+         <ul>
+             <li> <b>Transporte:</b> <span id="transpo"></span></li>
+             <li> <b>Año:</b> <span id="year"></span> </li>
+             <li> <b>Motor:</b> <span id="motor"></span></li>
+             <li> <b>Color:</b> <span id="color"></span></li>
+             <li> <b>Tipo:</b> <span id="type"></span></li>
+             <li> <b>Marcas:</b> <span id="marca"></span></li>
+             <li> <b>Modelo:</b> <span id="model"></span></li>
+             <li> <b>Alcance:</b> <span id="alcance"></span></li>
+         </ul>
+         <img src="images/bill.png" alt="" width="150px">
+         <button id="rentar">CONFIRMAR ALQUILER</button>
+        </div>
+    </div>
     <footer>
         <h1>Hecho por Hely Méndez</h1>
     </footer>
