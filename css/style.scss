@@ -203,3 +203,58 @@ a:hover {
     @include contenedores();
     grid-template-columns: auto auto;
 }
+// grid detail content
+.addContent{
+    @include contenedores();
+    grid-template-columns: auto auto;
+}
+
+.addContent .cont{
+    grid-column: 1/3;
+}
+.addContent hr{
+    margin-top: 20px;
+    background-image: linear-gradient(left, #fff, red, #fff);
+     text-align: center;
+    position: relative;
+     top: -12px; 
+    display: inline-block; 
+    width: 500px;
+     height: 2px; 
+    padding: 0;
+    border: 2px solid #CFB1B7;
+     border-radius: 4px;
+      background: #83858C; 
+      color: white; 
+      font-size: 12px;
+     line-height: 24px;
+    grid-column: 1/3;
+}
+.addContent p{
+    font-family: $font;
+    font-size: 20px;
+}
+.sectContent{
+    @include contenedores();
+    grid-template-columns: 50px 50px;
+}
+.sectContent span{
+    font-size: 25px;
+    margin-top: 10px;
+}
+.content img{
+    border-radius: 55px 25px;
+}
+.girar {
+    animation-name: girando;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    transform-style: preserve-3d;
+ }
+
+ @keyframes girando {
+    from { transform: rotateY(0deg);    }
+    to   { transform: rotateY(-360deg); }
+  }
+
