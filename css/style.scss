@@ -357,3 +357,29 @@ a:hover {
     font-family: $font;
     font-weight: bold;
 }
+
+.footer {
+    font-family: $font;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #BCC7A5;
+    text-align: center;
+  }
+
+  .footContent{
+      @include contenedores();
+      grid-template-columns: auto auto;
+  }
+.footSect{
+    @include contenedores();
+    grid-template-columns: 31px 31px 31px;
+}
+  .footImages{
+      margin-top: 3px;
+    transition: width 2s, height 2s, transform 2s;
+  }
+  .footImages:hover{
+    transform: rotate(360deg);
+  }
