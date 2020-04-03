@@ -91,9 +91,23 @@ function createRent() {
         (<HTMLSpanElement>document.getElementById("lcnc")).innerHTML = transporteTerrestre.getAlcance();
     } else if (transportE == 'maritimo') {
         let transporteMaritimo = new Maritimo(transportE,aniO,motoR, coloR,tipO,marcA,modelO,alcancE);
-        console.log('Maritimo');
+        (<HTMLSpanElement>document.getElementById("trnsp")).innerHTML = transporteMaritimo.getTransport();
+        (<HTMLSpanElement>document.getElementById("yr")).innerHTML = transporteMaritimo.getMonth();
+        (<HTMLSpanElement>document.getElementById("mtr")).innerHTML = transporteMaritimo.getMotor();
+        (<HTMLSpanElement>document.getElementById("cr")).innerHTML = transporteMaritimo.getColor();
+        (<HTMLSpanElement>document.getElementById("tp")).innerHTML = transporteMaritimo.getType();
+        (<HTMLSpanElement>document.getElementById("mrc")).innerHTML = transporteMaritimo.getMarca();
+        (<HTMLSpanElement>document.getElementById("mdl")).innerHTML = transporteMaritimo.getModel();
+        (<HTMLSpanElement>document.getElementById("lcnc")).innerHTML = transporteMaritimo.getAlcance();
     } else {
         let transporteAereo = new Aereo(transportE,aniO,motoR, coloR,tipO,marcA,modelO,alcancE);
-        console.log('Aereo');
+        (<HTMLSpanElement>document.getElementById("trnsp")).innerHTML = transporteAereo.getTransport();
+        (<HTMLSpanElement>document.getElementById("yr")).innerHTML = transporteAereo.getMonth();
+        (<HTMLSpanElement>document.getElementById("mtr")).innerHTML = transporteAereo.getMotor();
+        (<HTMLSpanElement>document.getElementById("cr")).innerHTML = transporteAereo.getColor();
+        (<HTMLSpanElement>document.getElementById("tp")).innerHTML = transporteAereo.getType();
+        (<HTMLSpanElement>document.getElementById("mrc")).innerHTML = transporteAereo.getMarca();
+        (<HTMLSpanElement>document.getElementById("mdl")).innerHTML = transporteAereo.getModel();
+        (<HTMLSpanElement>document.getElementById("lcnc")).innerHTML = transporteAereo.getAlcance();
     }
 }

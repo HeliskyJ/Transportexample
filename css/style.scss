@@ -294,21 +294,6 @@ a:hover {
     padding: 16px 32px;
 }
 
-// // detail content
-// .content {
-//     margin-top: 7%;
-//     @include contenedores();
-//     grid-template-columns: auto auto;
-// }
-// // grid detail content
-// .addContent {
-//     @include contenedores();
-//     grid-template-columns: auto auto;
-// }
-
-// .addContent .cont {
-//     grid-column: 1/3;
-// }
 .addContent hr {
     margin-top: 20px;
     background-image: linear-gradient(left, #fff, red, #fff);
